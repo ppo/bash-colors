@@ -43,3 +43,13 @@ Or in regex language: `0?(-?[krgybmcw])?(_[krgybmcw])?[BLUFN]*`
 
 - `echo -e "$(c 0wB)Bold white$(c) and normal"`
 - `echo -e "Normal text… $(c r_yB)BOLD red text on yellow background… $(c _w)now on white background… $(c 0U) reset and underline… $(c) and back to normal."`
+
+
+### TODO
+
+- Way too slow! 😞 How to improve performance? Improve regex? Compile regex?
+
+
+### License
+
+Licensed under the [MIT License](LICENSE).
