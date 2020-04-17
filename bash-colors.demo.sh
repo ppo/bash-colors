@@ -3,20 +3,19 @@
 . bash-colors.sh
 
 declare -A LABELS=(
-  [k]="Black" [r]="Red" [g]="Green" [y]="Yellow" [b]="Blue" [m]="Magenta" [c]="Cyan" [w]="White"
-  [-]="Foreground" [_]="Background"
-  [B]="Bold" [U]="Underline" [F]="Flash/blink" [N]="Negative" [BU]="Bold & underline"
-  [L]="Normal" [0]="Reset"
+  [K]="fg Black" [R]="fg Red" [G]="fg Green" [Y]="fg Yellow" [B]="fg Blue" [M]="fg Magenta" [C]="fg Cyan" [W]="fg White"
+  [k]="bg Black" [r]="bg Red" [g]="bg Green" [y]="bg Yellow" [b]="bg Blue" [m]="bg Magenta" [c]="bg Cyan" [w]="bg White"
+  [s]="Bold" [u]="Underline" [f]="Blink" [n]="Negative" [su]="Bold & underline"
+  [N]="Normal" [0]="Reset"
 )
 
-for f in L B U "BU" F; do
+for f in n s u f "su"; do
   echo -e "\n${LABELS[$f]^^}:"
-  for fc in k r g y b m c w; do
-    printf "  [${fc}${f/D/}] $(c ${fc}${f})fg $(printf "%-7s" "${LABELS[$fc]}")$(c)"
-    printf "  [${fc}${f/D/}N] $(c ${fc}${f}N) negative $(c)"
-    for bc in k r g y b m c w; do
-      # Here we use `-${fc}` and `$(c 0)` to test if it works also if used.
-      printf "  [${fc}_${bc}${f/D/}] $(c -${fc}_${bc}${f}) bg $(printf "%-7s" "${LABELS[$bc]}") $(c 0)"
+  for fg in K R G Y B M C W; do
+    printf "  [${fg}${f/D/}] $(c ${fg}${f})$(printf "%-10s" "${LABELS[$fg]}")$(c)"
+    printf "  [${fg}${f/D/}N] $(c ${fg}${f}N) negative $(c)"
+    for bg in k r g y b m c w; do
+      printf "  [${fg}${bg}${f/D/}] $(c ${fg}${bg}${f}) $(printf "%-7s" "${LABELS[$bg]}") $(c)"
     done
     echo
   done
