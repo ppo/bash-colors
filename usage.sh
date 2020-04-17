@@ -22,7 +22,7 @@ echo -e "  │  `c Ms`C`c`/`c Ms`c`c`  │ `c Ws`Cyan`c`    │ \\\033[ + 3/4 + 
 echo -e "  │  `c Ms`W`c`/`c Ms`w`c`  │ `c Ws`White`c`   │ \\\033[ + 3/4 + 7m │   └──────┴─────────────────┴──────────┘"
 echo -e "  └───────┴─────────┴──────────────────┘"
 echo
-echo -e "`c Ws`Remarks:`c`"
+echo -e "`c Ws`Remark:`c`"
 echo -e "  - Reset must come before the others… or it will undo immediately the formatting! So `c Y`\$(`c C`c `c M`0s`c Y`)`c` and not `c Y`\$(`c C`c `c M`s0`c Y`)`c`."
 echo
 echo -e "`c Ws`Examples:`c`"
