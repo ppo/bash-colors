@@ -1,23 +1,7 @@
 # Bash Colors
 
-### KISS
+> 🙈 _**KISS:** See [`kiss-colors.sh`](kiss-colors.sh) for a simpler version_ 😉
 
-```bash
-# Colors. Uppercase = bold.
-if ((`tput colors` >= 8)); then
-  readonly reset="\e[0m"
-  readonly black="\e[0;30m";   readonly BLACK="\e[1;30m"
-  readonly red="\e[0;31m";     readonly RED="\e[1;31m"
-  readonly green="\e[0;32m";   readonly GREEN="\e[1;32m"
-  readonly yellow="\e[0;33m";  readonly YELLOW="\e[1;33m"
-  readonly blue="\e[0;34m";    readonly BLUE="\e[1;34m"
-  readonly magenta="\e[0;35m"; readonly MAGENTA="\e[1;35m"
-  readonly cyan="\e[0;36m";    readonly CYAN="\e[1;36m"
-  readonly white="\e[0;37m";   readonly WHITE="\e[1;37m"
-fi
-```
-
----
 
 ### Usage
 
